@@ -1,0 +1,66 @@
+<html lang="en">
+    <style>
+
+ 
+.Center{
+    background-image: url('/static/titanic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+      
+    
+}
+.logo h1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+body{
+    background-color: cadetblue;
+}
+body center h1{
+    padding-top: 20px;
+    color: aliceblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 32%;
+    margin-top: 136px;
+    height: 32%;
+   
+}
+.container p {
+    padding: 28px;
+    font-size: 1.5rem;
+    background-color: #264c6d;
+}
+
+
+    </style>
+<body>
+    
+    <center class="Center">
+        <h1>Titanic survival prediction</h1>
+    <div class="container">
+
+        {% if data == 0 %}
+        <!-- Not Alive Image -->
+        <p #="para">Not Alive</p>
+        <p>We understand that this prediction may be distressing. Predictive models are not definitive, and this result is based on statistical analysis. It's important to approach such predictions with caution and consult with healthcare professionals for accurate assessments.</p>
+
+
+        {% else %} 
+        <!-- Alive Image -->
+        <p>You would be Alive</p>
+
+
+        {% endif %} 
+        <br><br>
+        <a href="/">Go back to the home page</a>
+    </div>
+    </center>
+
+</body>
+</html>
